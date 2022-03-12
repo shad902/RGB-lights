@@ -1,9 +1,3 @@
-/*  ECE 331, BBK library
- *  Michigan State University
- *  Solution file, RGB_LED.c
- *  Created by Sina Parsnejad
- *  Summer 2020
- */
 
 #include "E331KIT.h"
 //#include "../../Library/utils.h"  
