@@ -1,0 +1,116 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Shadman Chowdhury, Michigan State University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.33.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.4.0
+Target DLL:      CMSIS_AGDI.dll V1.32.12.0
+Dialog DLL:      TARMCM1.DLL V1.14.3.0
+ 
+<h2>Project:</h2>
+H:\ECE 331\Keil\Project9\ex3\states.uvprojx
+Project File Date:  04/15/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling utils.c...
+..\..\Library\utils.h(11): error:  #18: expected a ")"
+  void delay_ms(int x/1000);
+..\..\Library\utils.h(12): error:  #18: expected a ")"
+  void delay_us(int x/1000000);
+..\..\Library\utils.c: 0 warnings, 2 errors
+assembling startup_MKL25Z4.s...
+compiling RGB_CONFIG.c...
+..\../Library/utils.h(11): error:  #18: expected a ")"
+  void delay_ms(int x/1000);
+..\../Library/utils.h(12): error:  #18: expected a ")"
+  void delay_us(int x/1000000);
+..\RGB_CONFIG.c(20): warning:  #223-D: function "MY_FROM_GPIO_init" declared implicitly
+  		MY_FROM_GPIO_init();
+..\RGB_CONFIG.c(29): warning:  #68-D: integer conversion resulted in a change of sign
+  	PTD->PDOR = PTD->PDIR &- (1<<1);
+..\RGB_CONFIG.c(32): warning:  #68-D: integer conversion resulted in a change of sign
+  		PTB->PDOR = PTB->PDIR &- (1<<18); //red on
+..\RGB_CONFIG.c(33): warning:  #68-D: integer conversion resulted in a change of sign
+  		PTB->PDOR = PTB->PDIR &- (1<<19); // green on (y)
+..\RGB_CONFIG.c(37): warning:  #68-D: integer conversion resulted in a change of sign
+  		PTB->PDOR = PTD->PDIR &- (1<<19); //green on (c)
+..\RGB_CONFIG.c(40): warning:  #68-D: integer conversion resulted in a change of sign
+  		PTD->PDOR = PTD->PDIR &- (1<<1); //blue
+..\RGB_CONFIG.c(41): warning:  #68-D: integer conversion resulted in a change of sign
+  		PTB->PDOR = PTB->PDIR &- (1<<18); //red on (m)
+..\RGB_CONFIG.c(44): warning:  #68-D: integer conversion resulted in a change of sign
+  		PTD->PDOR - PTD->PDIR &- (1<<1); //blue on
+..\RGB_CONFIG.c(45): warning:  #68-D: integer conversion resulted in a change of sign
+  		PTB->PDOR - PTB->PDIR &- (1<<18); //red on
+..\RGB_CONFIG.c(46): warning:  #68-D: integer conversion resulted in a change of sign
+  		PTB->PDOR - PTB->PDIR &- (1<<19); // green on makes white
+..\RGB_CONFIG.c(54): error:  #268: declaration may not appear after executable statement in block
+  void PORT_B_and_D__FUNCTION
+..\RGB_CONFIG.c(54): error:  #67: expected a "}"
+  void PORT_B_and_D__FUNCTION
+..\RGB_CONFIG.c(65): warning:  #177-D: variable "val"  was declared but never referenced
+    int val;
+..\RGB_CONFIG.c(66): warning:  #177-D: variable "result"  was declared but never referenced
+    int result;
+..\RGB_CONFIG.c: 12 warnings, 4 errors
+compiling main.c...
+../../Library/utils.h(11): error:  #18: expected a ")"
+  void delay_ms(int x/1000);
+../../Library/utils.h(12): error:  #18: expected a ")"
+  void delay_us(int x/1000000);
+main.c(12): error:  #70: incomplete type is not allowed
+  	enum RGB_T RGB_state=Red;
+main.c(132): warning:  #1-D: last line of file ends without a newline
+   
+main.c: 1 warning, 3 errors
+compiling system_MKL25Z4.c...
+".\Objects\states.axf" - 9 Error(s), 13 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.0.pack
+                Keil.Kinetis_KLxx_DFP.1.15.0
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 2.5.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\MKL25Z128xxx4
+  .\RTE\_Target_1
+  C:\Users\shadm\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\shadm\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.5.0
+      Source file:   Device\Source\ARM\startup_MKL25Z4.s
+      Include file:  Device\Source\system_MKL25Z4.h
+      Source file:   Device\Source\system_MKL25Z4.c
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
